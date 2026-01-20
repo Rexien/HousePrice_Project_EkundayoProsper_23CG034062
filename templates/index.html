@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>House Price Prediction</h1>
+        <p>Enter the details of the house to get an estimated price.</p>
+        
+        <form action="{{ url_for('predict') }}" method="post">
+            <div class="form-group">
+                <label for="OverallQual">Overall Quality (1-10)</label>
+                <input type="number" name="OverallQual" id="OverallQual" min="1" max="10" required placeholder="e.g. 7">
+            </div>
+
+            <div class="form-group">
+                <label for="GrLivArea">Living Area (sq ft)</label>
+                <input type="number" name="GrLivArea" id="GrLivArea" required placeholder="e.g. 2000">
+            </div>
+
+            <div class="form-group">
+                <label for="TotalBsmtSF">Basement Area (sq ft)</label>
+                <input type="number" name="TotalBsmtSF" id="TotalBsmtSF" required placeholder="e.g. 1000">
+            </div>
+
+            <div class="form-group">
+                <label for="GarageCars">Garage Cars (Capacity)</label>
+                <input type="number" name="GarageCars" id="GarageCars" required placeholder="e.g. 2">
+            </div>
+
+            <div class="form-group">
+                <label for="FullBath">Full Bathrooms</label>
+                <input type="number" name="FullBath" id="FullBath" required placeholder="e.g. 2">
+            </div>
+
+            <div class="form-group">
+                <label for="YearBuilt">Year Built</label>
+                <input type="number" name="YearBuilt" id="YearBuilt" required placeholder="e.g. 2005">
+            </div>
+
+            <button type="submit" class="btn">Predict Price</button>
+        </form>
+
+        <br>
+        <div class="result">
+            <h3>{{ prediction_text }}</h3>
+        </div>
+    </div>
+</body>
+</html>
