@@ -1,6 +1,6 @@
-Name: Ekundayo Prosper
+Name: Ekundayo Prosper Zamijude
 Matric Number: 23CG034062
 Machine Learning Algorithm Used: Random Forest Regressor
 Model persistence method used: Joblib
-Live URL of the hosted application: [INSERT LIVE URL HERE]
-GitHub repository link: [INSERT GITHUB LINK HERE]
+Live URL of the hosted application: https://house-price-prediction-49kz.onrender.com/
+GitHub repository link: https://github.com/Rexien/HousePrice_Project_EkundayoProsper_23CG034062
